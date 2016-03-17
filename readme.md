@@ -1,10 +1,10 @@
-# React Redux Scaffold
+# React Redux API Browser
 
-This is a seed project for building static react website, not for build universal app.
+A React Redux Scaffold to aid in designing the stores and actions
+supporting a React UI.
 
-## Feature
-- ES6+ support via [babel](https://babeljs.io)
-- Redux and its best practice (debug, style, routing)
+Simply displays the content of various stores using the ObjectInspector React Component
+
 
 ## Setup
 
@@ -18,17 +18,18 @@ This is a seed project for building static react website, not for build universa
 - `npm start` run a test server
 - `npm run build` build production app
 
-## Guide
+
+
+## Feature Inherited from parent project [redux-react-scaffold](https://github.com/lcjnil/react-redux-scaffold)
+
+- ES6+ support via [babel](https://babeljs.io)
+- Redux and its best practice (debug, style, routing)
+
 
 ### Path Alias (resolve)
 Anything in `src/components` can be required by only `components/xx/xx.js`
 
 see `webpack.config.js` `resolve` for more.
-
-### Style Guide
-Use [css-modules](https://github.com/css-modules/css-modules) to style react component.
-
-Also, I use postcss to enhance css functions. You can write scss-like css, and use some future feature via cssnext.
 
 ### Server Mocks
 
@@ -40,7 +41,6 @@ Write your server mocks at `src/mocks`.
 
 ## TODO
 
-- [ ] create a better demo
-- [ ] create test suits
-- [x] update babel
-- [x] update redux-devtools
+- [ ] break out stores to multiple files
+- [ ] add asynchronous data loading into stores
+- [ ] add "wiremock" capability to save responses for testing
