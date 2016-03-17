@@ -13,7 +13,9 @@ class ApiPage extends Component {
   }
 }
 
+/*
 const mapStateToProps = function mapStateToProps(state) {
   return { available: state };
 };
 export default connect(mapStateToProps, contentActionCreators)(ApiPage);
+*/
