@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import ObjectInspector from 'react-object-inspector';
 import * as contentActionCreators from '../actions/Actions.js';
@@ -11,6 +12,7 @@ class ApiApp extends Component {
     const { dictionary, activeLanguage, loadDefault } = this.props;
     return (
     <div>
+      <Link to="/">&lt;Back to Dictionaries</Link>
       <section id="actions">
         <h2>Actions That Change State</h2>
          <ul>
