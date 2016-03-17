@@ -8,14 +8,14 @@ class ApiApp extends Component {
     /*
     const { todos, filter, addTodo, deleteTodo, toggleChecked, setFilter, clearTodo } = this.props;
     */
-    const { content, loadDefault } = this.props;
+    const { dictionary, loadDefault } = this.props;
     return (
     <div>
       <section id="actions">
          <button onClick={loadDefault}>Load Default</button>
       </section>
       <section id="show-content">
-         <ObjectInspector data={content} />
+         <ObjectInspector data={dictionary} />
       </section>
      </div>
     );
@@ -27,6 +27,6 @@ class ApiApp extends Component {
  * the Immutable List becomes an array.
  */
 const mapStateToProps = function mapStateToProps(state) {
-  return { content: state.todos.get('content') };
+  return { dictionary: state.dictionary.toJS() };
 };
 export default connect(mapStateToProps, contentActionCreators)(ApiApp);

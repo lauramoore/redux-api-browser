@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_CHECKED, DELETE_TODO, SET_FILTER, CLEAR_TODO, LOAD_DEFAULT } from '../constants/ActionTypes';
+import { ADD_TODO, TOGGLE_CHECKED, DELETE_TODO, SET_FILTER, CLEAR_TODO, LOAD_LANGUAGE } from '../constants/ActionTypes';
 
 export function addTodo(text) {
   return {
@@ -43,7 +43,7 @@ export function clearTodo() {
 
 export function loadDefault() {
   return {
-    type: LOAD_DEFAULT,
+    type: LOAD_LANGUAGE,
     payload: {
       language: 'ENGLISH',
       content: {
