@@ -5,9 +5,10 @@ export default class IndexPage extends Component {
   render() {
     return (
       <div>
-        <h1>Hello, world!</h1>
-        <Link to="/todo">Go to TodoList</Link>
-        <Link to="/api">Go to Api Browser</Link>
+        <h1>Browse a store - api</h1>
+        <ul>
+          <li><Link to="/content">Content API</Link></li>
+        </ul>
       </div>
     );
   }
