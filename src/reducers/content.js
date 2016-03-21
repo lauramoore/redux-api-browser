@@ -24,6 +24,25 @@ export function dictionary(state = emptyContent, action = null) {
   }
 }
 
+const initialTweets = Map({
+  user: 'lauramoore',
+  repos: [],
+  isLoading: false
+});
+
+export function github(state = initialTweets, action) {
+  switch (action.type) {
+    case 'ADD_TWEETS':
+      return state.set({ repos: action.payload });
+    case 'ERROR':
+      return action.payload;
+    case 'IS_LOADING':
+      return state.set({ isLoading: action.isLoading });
+    default:
+      return state;
+  }
+}
+
 /*
  * Active Language is a simple String property as a store
  */

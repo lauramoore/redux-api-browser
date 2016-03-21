@@ -8,6 +8,7 @@ export default class IndexPage extends Component {
         <h1>Browse a store - api</h1>
         <ul>
           <li><Link to="/content">Content API</Link></li>
+          <li><Link to="/async">Async Content Example</Link></li>
         </ul>
       </div>
     );
