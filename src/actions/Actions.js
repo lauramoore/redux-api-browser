@@ -62,12 +62,12 @@ export function loadReposAction() {
     /* notify app a loading event is occuring */
     dispatch(loadingChangedAction(true));
     /* create and return promise for the web call */
-    return fetch(url)
+    return fetch(url, { mode: 'cors' })
     .then((result) => {
       /* change loading state again */
       dispatch(loadingChangedAction(false));
       if (result.status === 200) {
-        return result.json;
+        return result.json();
       }
       throw result;
     })

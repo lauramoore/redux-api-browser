@@ -8,6 +8,7 @@ class ApiApp extends Component {
   render() {
     return (
     <div>
+      <div>Network status : {this.props.networkStatus.status}</div>
       <Link to="/">&lt;Back to Index</Link>
       <section id="actions">
         <h2>Actions That Change State</h2>
@@ -28,6 +29,6 @@ class ApiApp extends Component {
  * exposes the state as props to the component
  */
 const mapStateToProps = function mapStateToProps(state) {
-  return { repos: state.github.toJS(), loadReposAction: state.loadReposAction };
+  return { repos: state.github.toJS(), networkStatus: state.network, loadReposAction: state.loadReposAction };
 };
 export default connect(mapStateToProps, contentActionCreators)(ApiApp);

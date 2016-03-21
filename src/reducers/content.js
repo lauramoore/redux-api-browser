@@ -26,20 +26,29 @@ export function dictionary(state = emptyContent, action = null) {
 
 const initialTweets = Map({
   user: 'lauramoore',
-  repos: [],
+  repos: undefined,
   isLoading: false
 });
 
 export function github(state = initialTweets, action) {
   switch (action.type) {
     case 'ADD_TWEETS':
-      return state.set({ repos: action.payload });
+      return state.set('repos', action.payload);
     case 'ERROR':
       return action.payload;
     case 'IS_LOADING':
-      return state.set({ isLoading: action.isLoading });
+      return state.set('isLoading', action.isLoading);
     default:
       return state;
+  }
+}
+
+export function network(state, action) {
+  switch (action.type) {
+    case 'ERROR':
+      return { status: 'ERROR', reason: action.payload };
+    default:
+      return { status: 'OK' };
   }
 }
 
